@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="videoItem"
+            type="com.pradip.data.user.local.entities.VideoDetail" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.dailymotion.android.player.sdk.PlayerWebView
+            android:id="@+id/dm_player_web_view"
+            android:layout_width="match_parent"
+            android:layout_height="315dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:text="@{videoItem.title}"
+            android:textColor="@color/black_65"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/dm_player_web_view" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,5 @@
+include ':video'
+include ':data'
+include ':core'
+include ':app'
+rootProject.name = "VideoStreamer"
