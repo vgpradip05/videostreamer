@@ -7,7 +7,6 @@
         <variable
             name="videoItem"
             type="com.pradip.data.user.local.entities.VideoDetail" />
-
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,6 +15,11 @@
 
         <com.dailymotion.android.player.sdk.PlayerWebView
             android:id="@+id/dm_player_web_view"
+            controls="@{false}"
+            init="@{true}"
+            loadVideo="@{videoItem.id}"
+            setQuality="240"
+            toMute="@{true}"
             android:layout_width="match_parent"
             android:layout_height="315dp"
             app:layout_constraintStart_toStartOf="parent"

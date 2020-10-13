@@ -23,21 +23,6 @@ class VideoAdapter(val clickClickListener: IVideoListClickListener? = null) :
         fun onBind(video: VideoDetail) {
             binding.videoItem = video
 
-
-            val params: Map<String?, String?> = mapOf(
-                "ui-highlight" to "fff",
-                "queue-enabled" to "true",
-                "logo" to "false"
-            )
-            binding.dmPlayerWebView?.initialize(
-                "https://www.dailymotion.com/embed/",
-                params,
-                emptyMap()
-            )
-            binding.dmPlayerWebView?.load(mapOf("video" to video.id))
-            binding.dmPlayerWebView?.showControls(false)
-            binding.dmPlayerWebView?.mute()
-            binding.dmPlayerWebView?.quality = "240"
             binding.dmPlayerWebView?.play()
             binding.root.setOnClickListener {
                 clickClickListener?.onClicked(getItem(absoluteAdapterPosition)!!)
