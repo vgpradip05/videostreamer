@@ -12,9 +12,13 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
         android:layout_margin="3dp">
 
         <com.dailymotion.android.player.sdk.PlayerWebView
+            android:clickable="false"
+            android:focusable="false"
             android:id="@+id/dm_player_web_view"
             controls="@{false}"
             init="@{true}"

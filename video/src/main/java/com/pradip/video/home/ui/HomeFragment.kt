@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.observe
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.pradip.core.extensions.navigateSafe
 import com.pradip.core.ui.BaseFragment
 import com.pradip.data.user.local.entities.VideoDetail
 import com.pradip.video.R
@@ -49,6 +51,9 @@ class HomeFragment : BaseFragment(R.layout.fragment_home), VideoAdapter.IVideoLi
     }
 
     override fun onClicked(video: VideoDetail) {
-
+        findNavController().navigateSafe(
+            R.id.action_home_to_detail,
+            R.id.homeFragment,
+            Bundle().apply { putString("video", video.id) })
     }
 }
