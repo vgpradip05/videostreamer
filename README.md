@@ -12,6 +12,8 @@ Currently I have integrated network requests, local databases and Material desig
 
 I have practiced **Kotlin**, **Coroutines**, **Jetpack** and **androidx** also tried to follow **Solid and Dry** principles.
 
+Detail Page of Video: Work in progress :construction:
+
 Screenshots: 
 ======
 <p>
